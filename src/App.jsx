@@ -1,6 +1,9 @@
 import './App.scss';
+import Skills from './components/skills/Skills';
 import Home from './components/home/Home';
 import NavBar from './components/navbar/NavBar';
+import Projects from './components/projects/Projects';
+import Contact from './components/contact/Contact';
 
 const App = () => {
   return <div>
@@ -8,12 +11,9 @@ const App = () => {
       <NavBar />
       <Home />
     </section>
-    <section>Parallax</section>
-    <section id='Skills'>Skills</section>
-    <section>Parallax</section>
-    <section id='Projects'>Projects</section>
-    <section>Parralax</section>
-    <section id='Contact'>Contact</section>
+    <section id='Skills'><Skills /></section>
+    <Projects id='Projects'/>
+    <section id='Contact'><Contact /></section>
   </div>;
 };
 

@@ -6,17 +6,11 @@
         margin: auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: end;
         height: 100%;
 
-        span{
-            font-weight: bold;
-            font-size: 20px;
-
-        }
-
         .social{
-
+            
             display: flex;
             gap: 20px;
 

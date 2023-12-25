@@ -6,31 +6,55 @@
 
   .wrapper{
     max-width: 1366px;
-    height: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .imageContainer{
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      border: 2px solid orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      img{
+        height: 100%;
+        width: auto;
+        border-radius: 100%;
+      }
+    }
 
     .textContainer{
         height: 100%;
         display: flex;
-        width: 50%;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 40px;
 
         h2{
             font-size: 30px;
-            color: rebeccapurple;
+            color: orange;
             letter-spacing: 10px;
+            text-align: center;
         }
 
         h1{
             font-size: 65px;
+            text-align: center;
         }
 
         .buttons{
             
             display: flex;
             gap: 20px;
+            z-index: 20;
 
             button{
                 padding: 20px;
@@ -52,17 +76,12 @@
 
   }
 
-  .imageContainer{
-    height: 100%;
-    position: absolute;
-    right: 10%;
-    top: 15%;
-  }
+  
 
  .slidingTextContainer{
     position: absolute;
     font-size: 50vh;
-    bottom: -120px;
+    bottom: 0;
     white-space: nowrap;
     color: #ffffff09;
     width: 50%;
@@ -70,3 +89,4 @@
 
   }
 }
+
