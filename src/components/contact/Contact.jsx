@@ -1,9 +1,27 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import './Contact.scss';
 import {motion, animate} from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
+ 
+  const ref = useRef();
+
+  const refreshPage = ()=> {
+    window.location.reload();
+  }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_tium0rd', 'template_bu3lv4g', ref.current, 'm_rDNRcNTOjHhi2Ss')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   return (
     <div className='contact'>
@@ -26,11 +44,11 @@ const Contact = () => {
         <motion.div className="form_container" initial={{opacity:0, y:-300}} 
                                                whileInView={{opacity:1, y:0}} 
                                                transition={{duration:0.8}}>
-            <form action="">
-                <input type="text" required placeholder='Name'/>
-                <input type="email" required placeholder='Email' />
-                <textarea  rows={8} placeholder='message'></textarea>
-                <button>Submit</button>
+            <form action="" ref={ref} onSubmit={sendEmail} >
+                <input type="text" required placeholder='Name' name="name"  />
+                <input type="email" required placeholder='Email' name="email" />
+                <textarea  rows={8} placeholder='message' name="message"></textarea>
+                <button >Submit</button>
             </form>
 
         </motion.div>
