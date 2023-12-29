@@ -17,9 +17,7 @@
     "react-dom": "^18.2.0",
     "react-router": "^6.21.0",
     "sass": "^1.68.0",
-    "engines": {
-     "node": "20.10.0"
-    },
+    
   },
   "devDependencies": {
     "@swc/cli": "^0.1.63",
