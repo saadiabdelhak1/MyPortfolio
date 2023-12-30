@@ -4,6 +4,7 @@ import Home from './components/home/Home';
 import NavBar from './components/navbar/NavBar';
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return <div>
@@ -13,7 +14,10 @@ const App = () => {
     </section>
     <section id='Skills'><Skills /></section>
     <Projects id='Projects'/>
-    <section id='Contact'><Contact /></section>
+    <section id='Contact'>
+      <Contact />
+      <Footer />
+    </section>
   </div>;
 };
 
