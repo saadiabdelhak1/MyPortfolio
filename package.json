@@ -19,7 +19,7 @@
     "sass": "^1.68.0"  
   },
   "engines": {
-    "node": "14.17.5"
+    "node": "20.10.0"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.63",
